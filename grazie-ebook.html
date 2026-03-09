@@ -1,21 +1,120 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="3;url=/files/manuale per la riconquista.pdf">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="3;url=/ebook/files/manuale-per-la-riconquista.pdf">
   <title>Grazie per il tuo acquisto</title>
+  <style>
+    :root {
+      --pink: #e6368b;
+      --teal: #2bb4b1;
+      --dark: #1f1c3d;
+      --text: #2d2d2d;
+      --bg: #fffafc;
+      --border: #ece6eb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #fff7fb 0%, #fffdfc 100%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .card {
+      width: min(680px, 100%);
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(31, 28, 61, 0.08);
+      padding: 40px 32px;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(230, 54, 139, 0.08);
+      color: var(--pink);
+      font-weight: 700;
+      font-size: 0.92rem;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      color: var(--dark);
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      line-height: 1.1;
+    }
+
+    p {
+      margin: 0 0 14px;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .small {
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0 28px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--pink), #ff4ea0);
+      color: #fff;
+      font-weight: 800;
+      text-decoration: none;
+      margin: 18px 0 12px;
+      box-shadow: 0 16px 36px rgba(230, 54, 139, 0.22);
+    }
+  </style>
+
+  <!-- Meta Pixel Code -->
   <script>
-fbq('track', 'Purchase', {
-value: 8.99,
-currency: 'EUR'
-});
-</script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1193237852955874');
+    fbq('track', 'PageView');
+    fbq('track', 'Purchase', {
+      value: 8.99,
+      currency: 'EUR'
+    });
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=1193237852955874&ev=PageView&noscript=1" />
+  </noscript>
 </head>
 <body>
-  <h1>Grazie per il tuo acquisto 💛</h1>
-  <p>Il download partirà automaticamente tra pochi secondi.</p>
-  <p>Se non parte, clicca qui:</p>
-  <a href="/files/manuale per la riconquista.pdf" download>Scarica l’ebook</a>
+  <main class="card">
+    <div class="badge">Acquisto completato</div>
+    <h1>Grazie per il tuo acquisto 💛</h1>
+    <p>Il download del tuo ebook partirà automaticamente tra pochi secondi.</p>
+    <p class="small">Se il download non parte da solo, puoi scaricarlo manualmente cliccando qui sotto.</p>
+    <a class="btn" href="/ebook/files/manuale-per-la-riconquista.pdf" download>Scarica subito l’ebook</a>
+    <p class="small">Conserva il file sul tuo dispositivo così potrai rileggerlo quando vuoi.</p>
+  </main>
 </body>
 </html>
