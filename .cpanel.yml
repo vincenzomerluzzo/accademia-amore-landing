@@ -1,16 +1,6 @@
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/laccademiadellam/public_html/
-    - /bin/mkdir -p $DEPLOYPATH
-
-    # HTML
-    - /bin/cp index.html $DEPLOYPATH/
-    - /bin/cp grazie-ebook.html $DEPLOYPATH/
-
-    # cartella ebook con pdf
-    - /bin/cp -R ebook $DEPLOYPATH/
-
-    # assets
-    - /bin/cp -R images $DEPLOYPATH/
-    - /bin/cp -R css $DEPLOYPATH/
-    - /bin/cp -R js $DEPLOYPATH/
+    - export DEPLOYPATH=/home2/laccademiadellam/public_html/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp grazie-ebook.html $DEPLOYPATH
+    - /bin/mkdir -p $DEPLOYPATH/ebook/files/
